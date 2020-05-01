@@ -75,7 +75,13 @@ class OCRModel:
         self.model.compile(optimizer=sgd, loss=loss, metrics=["accuracy"])
 
     def fit(self, imgs_array, labels_array, epochs=100):
-        self.model.fit(imgs_array, labels_array, epochs=epochs)
+        self.model.fit(
+            imgs_array,
+            labels_array,
+            epochs=epochs,
+            verbose=1,
+            use_multiprocessing=True,
+        )
 
     def evaluate(self, imgs_array, labels_array):
         return self.model.evaluate(imgs_array, labels_array)
