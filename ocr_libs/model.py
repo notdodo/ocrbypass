@@ -2,9 +2,9 @@ from os import environ, path, makedirs
 
 environ["TF_CPP_MIN_LOG_LEVEL"] = "1"
 from tensorflow.keras.optimizers import SGD
-from keras.initializers import Constant
-from keras.models import Sequential, model_from_json
-from keras.layers import (
+from tensorflow.keras.initializers import Constant
+from tensorflow.keras.models import Sequential, model_from_json
+from tensorflow.keras.layers import (
     Dense,
     Conv2D,
     MaxPooling2D,

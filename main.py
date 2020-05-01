@@ -5,9 +5,9 @@ import sys
 if __name__ == "__main__":
     from numpy import arange
 
-    for l in arange(0.65, 0.9, 0.08):
-        for d in arange(0.0051, 0.009, 0.005):
-            for m in arange(0.6, 0.9, 0.1):
+    for l in arange(0.1, 1, 0.1):
+        for d in arange(0.001, 0.100, 0.005):
+            for m in arange(0.1, 1, 0.1):
                 ocr = OCRModel((40, 30, 3), 36)
                 ocr.compile(
                     lr=l, decay=d, momentum=m, loss="mean_squared_logarithmic_error",
