@@ -1,4 +1,4 @@
-from keras.preprocessing.image import load_img, img_to_array
+from tensorflow.keras.preprocessing.image import load_img, img_to_array
 from os import path, listdir
 from numpy import zeros
 from ocr_libs.mapping import string_to_array
